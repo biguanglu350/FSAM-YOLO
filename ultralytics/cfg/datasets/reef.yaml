@@ -1,0 +1,12 @@
+# Reef dataset config for FSAM-YOLO
+# Path is resolved at runtime by the training script.
+# This file only defines the dataset structure.
+
+path: datasets/reef
+train: images/train
+val: images/val
+test: images/test
+
+# Classes
+names:
+  0: reef
