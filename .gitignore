@@ -1,0 +1,36 @@
+# Byte-compiled
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Environments
+.venv
+env/
+venv/
+.idea/
+.vscode/
+.claude/
+
+# Training artifacts
+wandb/
+
+# Pretrained weights (download separately, see README)
+/weights/
+
+# Large model files
+*.pth
+*.onnx
+*.engine
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*_temp.yaml
