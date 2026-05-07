@@ -5,7 +5,6 @@
 path: datasets/reef
 train: images/train
 val: images/val
-test: images/test
 
 # Classes
 names:

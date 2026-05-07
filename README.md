@@ -2,7 +2,7 @@
 
 *Source code and dataset for the paper "Shallow-Water Reef Detection Driven by Few-Shot Learning with Airborne LiDAR Bathymetry" (Su et al.). Provided for academic testing, verification, and reproduction.*
 
-Implementation of the FSAM-YOLO model with Cross-Scale Attention Module (CSAM) and Reptile-style MAML meta-learning for shallow-water reef detection using ALB data feature normalized images.
+Implementation of the FSAM-YOLO model with Cross-Scale Attention Module (CSAM), Reptile-style MAML meta-learning, and Augmented Consistency Regularization (ACR) for shallow-water reef detection using ALB data feature normalized images.
 
 ## Quick Start
 
@@ -27,16 +27,16 @@ You can also build your own dataset by modifying `ultralytics/cfg/datasets/reef.
 ### 3. Run Training
 
 ```bash
-python fsam_yolo_train_.py
+python fsam_yolo_train.py
 ```
 
-Training results will be saved to `runs/fsam_yolo/train/`.
+Training results will be saved to `runs/fsam_opt/train/`.
 
 ## Project Structure
 
 ```
 FSAM-YOLO/
-├── fsam_yolo_train_.py                    # MAML + YOLO training script
+├── fsam_yolo_train.py                      # MAML + YOLO + ACR training script
 ├── sample_augmentation.py                 # Composite data augmentation for reef samples
 ├── requirements.txt                       # Python dependencies
 ├── pyproject.toml                         # Package configuration
@@ -55,6 +55,10 @@ FSAM-YOLO/
 └── weights/                               # Pretrained weights (download manually)
     └── yolov10s.pt
 ```
+
+## Reproduction Notes
+
+Due to differences in PyTorch versions, CUDA toolkit, GPU architecture, and hardware environments, the hyperparameters provided in this repository serve as a reference baseline; users may need to fine-tune parameters according to their specific hardware setup to achieve optimal performance.
 
 ## License
 
