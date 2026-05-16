@@ -1,7 +1,3 @@
-"""
-FSAM-YOLO v2 Optimized — hyperparameter tuning for max precision/recall/mAP
-"""
-
 import os
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 import sys
